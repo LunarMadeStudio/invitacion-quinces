@@ -6,7 +6,6 @@
     --plateado: #C0C5CF;
     --plateado-brillante: #E6E9EE;
     --blanco-perla: #F7F8FA;
-    --gold-acento: #F5D76E;
 }
 
 * { box-sizing: border-box; }
@@ -22,15 +21,11 @@ body {
 
 /* HERO */
 .hero-section {
-    position: relative;
     padding: 40px 20px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    color: var(--azul-oscuro);
     text-align: center;
-    animation: fadeIn 1.8s ease-in-out;
 }
 
 .hero-image-wrap {
@@ -47,66 +42,79 @@ body {
     display: block;
 }
 
-/* Títulos */
+/* Títulos y textos especiales */
 .title-quinces {
     font-family: 'Great Vibes', cursive;
     font-size: 3rem;
     letter-spacing: 2px;
-    margin-bottom: 10px;
-    font-weight: 500;
     color: var(--azul-hielo);
-    text-shadow: 0 2px 14px rgba(255,255,255,0.4);
+    margin-bottom: 10px;
 }
 
 .nombre-quinces {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Great Vibes', cursive;
     font-size: 2rem;
+    color: var(--azul-hielo);
     margin-top: 4px;
-    font-weight: 600;
-    color: var(--azul-plateado);
-    text-shadow: 0 1px 10px rgba(255,255,255,0.3);
 }
 
 .fecha-evento {
-    margin-top: 8px;
     font-size: 1.2rem;
-    font-weight: 500;
+    color: var(--azul-oscuro);
+}
+
+/* Invitación */
+.invitacion-titulo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.9rem;
+    text-align: center;
     color: var(--azul-hielo);
+    margin-bottom: 12px;
 }
 
-/* Brillo para elementos clave */
-.sparkle-text {
-    position: relative;
-    display: inline-block;
-    animation: sparkle-glow 2.5s infinite alternate;
+.invitacion-texto {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--azul-oscuro);
+    margin-bottom: 12px;
 }
 
-@keyframes sparkle-glow {
-    0% { text-shadow: 0 0 6px var(--gold-acento), 0 0 12px var(--plateado-brillante); }
-    50% { text-shadow: 0 0 12px var(--gold-acento), 0 0 24px var(--plateado-brillante); }
-    100% { text-shadow: 0 0 6px var(--gold-acento), 0 0 12px var(--plateado-brillante); }
+.familia {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.4rem;
+    text-align: center;
+    color: var(--azul-hielo);
+    margin-top: 12px;
 }
 
-/* Contenido */
-.container {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 30px 20px;
-}
-
+/* Secciones y detalles */
 .section {
     background: #ffffff;
     border-radius: 14px;
     padding: 22px;
     margin-bottom: 24px;
     box-shadow: 0 6px 18px rgba(20,30,50,0.06);
+    text-align: center;
 }
 
 .section-title {
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
+    font-family: 'Great Vibes', cursive;
     font-size: 1.8rem;
-    color: var(--azul-plateado);
+    margin-bottom: 12px;
+    color: var(--azul-hielo);
+}
+
+.detalle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: var(--azul-oscuro);
+    margin: 4px 0;
+}
+
+/* Copas brindando */
+.copas {
+    font-size: 2rem;
     margin-bottom: 12px;
 }
 
@@ -135,23 +143,7 @@ body {
     display: block; 
 }
 
-/* Formulario confirmación */
-.confirm-form {
-    max-width: 520px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.confirm-form input,
-.confirm-form textarea {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid var(--azul-plateado);
-    background: #fff;
-}
-
+/* Botones */
 .btn {
     display: inline-block;
     padding: 12px 18px;
@@ -162,49 +154,13 @@ body {
     font-weight: 600;
 }
 
-.btn:hover {
-    background: var(--azul-hielo);
-}
-
-.map-frame {
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.live-section .btn { 
-    margin-right: 8px; 
-}
-
-.sparkle-effect { 
-    position: relative; 
-    overflow: hidden; 
-}
-
-.sparkle-effect::before, 
-.sparkle-effect::after {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px);
-    background-size: 8px 8px;
+.sparkle-text {
+    position: relative;
+    display: inline-block;
     animation: sparkle 8s linear infinite;
-    opacity: 0.35;
-}
-
-.sparkle-effect::after { 
-    animation-duration: 14s; 
-    opacity: 0.18; 
 }
 
 /* Animaciones */
-@keyframes fadeIn { 
-    from { opacity: 0; transform: translateY(18px); } 
-    to { opacity: 1; transform: none; } 
-}
-
 @keyframes glow {  
     0%,100% { box-shadow: 0 0 12px rgba(255,255,255,0.35); }
     50%      { box-shadow: 0 0 24px rgba(255,255,255,0.75); }
@@ -219,4 +175,6 @@ body {
 @media (max-width: 640px) {
     .title-quinces { font-size: 2.2rem; }
     .nombre-quinces { font-size: 1.5rem; }
+    .invitacion-titulo { font-size: 1.5rem; }
+    .invitacion-texto { font-size: 1rem; }
 }
