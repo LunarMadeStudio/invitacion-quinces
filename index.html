@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Invitación - Mariana Ángulo Ayala</title>
 
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <!-- Estilos -->
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <meta name="description" content="Invitación a los 15 años de Mariana Ángulo Ayala — Club Residencial Paralela 150, Bucaramanga. Transmisión en vivo por Google Meet." />
 </head>
@@ -18,15 +20,7 @@
     <h1 class="title-quinces">Mis 15 Años</h1>
     <h2 class="nombre-quinces">Mariana Ángulo Ayala</h2>
 
-    <!-- Mariposas volando -->
-    <div class="mariposas">
-      <div class="mariposa azul"></div>
-      <div class="mariposa plateada"></div>
-      <div class="mariposa azul"></div>
-    </div>
-
-    <!-- Imagen vertical -->
-    <div class="hero-image-wrap" style="margin-top:18px;">
+    <div class="hero-image-wrap">
       <img src="invitacion_quince_vertical.png" alt="Mariana - Invitación" class="hero-img" />
     </div>
   </header>
@@ -40,21 +34,34 @@
         Será un día mágico donde los sueños, la emoción y la felicidad se unen para crear recuerdos inolvidables.
         Esperamos contar con tu presencia para que este día sea aún más especial.
       </p>
-      <p class="familia">Con cariño:<br>Orlando Ángulo & Beatriz Ayala</p>
+      <p class="familia">
+        Con cariño:<br>
+        Orlando Ángulo & Beatriz Ayala
+      </p>
     </section>
 
-    <!-- Copas / decoración opcional (se pueden reemplazar por mariposas) -->
-    <!-- <div class="decoracion"></div> -->
+    <!-- Sección Mariposas -->
+    <section class="section mariposas-container">
+      <div class="mariposas">
+        <div class="mariposa azul"></div>
+        <div class="mariposa azul"></div>
+        <div class="mariposa azul"></div>
+        <div class="mariposa azul"></div>
+        <div class="mariposa plateada"></div>
+        <div class="mariposa plateada"></div>
+        <div class="mariposa plateada"></div>
+      </div>
+    </section>
 
     <!-- Cuenta regresiva -->
     <section class="section" aria-labelledby="countdown-title">
-      <h2 id="countdown-title"><em>Cuenta regresiva</em></h2>
+      <h2 id="countdown-title">Cuenta regresiva</h2>
       <div id="countdown" class="countdown" aria-live="polite"></div>
     </section>
 
     <!-- Detalles del evento -->
     <section class="section" aria-labelledby="details-title">
-      <h2 id="details-title"><em>Detalles del evento</em></h2>
+      <h2 id="details-title">Detalles del evento</h2>
       <p><strong>Fecha:</strong> 27 de diciembre de 2025</p>
       <p><strong>Hora:</strong> 7:00 PM</p>
       <p><strong>Lugar:</strong> Club Residencial Paralela 150</p>
@@ -63,16 +70,13 @@
 
     <!-- Mapa embebido -->
     <section class="section map-frame" aria-labelledby="map-title">
-      <h2 id="map-title"><em>Ubicación</em></h2>
+      <h2 id="map-title">Ubicación</h2>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d795.6322738584368!2d-73.1111433!3d7.0769508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683f9e50511aa1%3A0xbb112d3971937435!2sClub%20Residencial%20Paralela%20150!5e0!3m2!1ses!2sco!4v1700000000000"
-        width="100%" height="320" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
       </iframe>
-
       <p style="margin-top:12px;">
-        <a class="btn"
-          href="https://www.google.com/maps/dir//Cl.+111+%2322b+52,+Bucaramanga,+Santander/@7.0817492,-73.1960919,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e683fa05322a3c5:0x4116bdbab527a7d7!2m2!1d-73.1136524!2d7.081758?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D"
-          target="_blank" rel="noopener">
+        <a class="btn" href="https://www.google.com/maps/dir//Cl.+111+%2322b+52,+Bucaramanga,+Santander" target="_blank" rel="noopener">
           Abrir en Google Maps
         </a>
       </p>
@@ -80,9 +84,8 @@
 
     <!-- Transmisión en vivo (SOLO GOOGLE MEET) -->
     <section class="section live-section" aria-labelledby="live-title">
-      <h2 id="live-title"><em>📡 Transmisión en Vivo</em></h2>
+      <h2 id="live-title">📡 Transmisión en Vivo</h2>
       <p>Si no puedes acompañarnos de manera presencial, te invitamos a conectarte a la transmisión y compartir este momento tan especial.</p>
-
       <p style="margin-top:12px;">
         <a class="btn" href="https://meet.google.com/hst-wbhp-aop" target="_blank" rel="noopener">
           Unirme a la transmisión (Google Meet)
@@ -92,37 +95,28 @@
 
     <!-- Formulario de confirmación (RSVP) -->
     <section class="section" aria-labelledby="rsvp-title">
-      <h2 id="rsvp-title"><em>Confirmación de asistencia</em></h2>
-
+      <h2 id="rsvp-title">Confirmación de asistencia</h2>
       <form id="confirm-form" class="confirm-form" aria-describedby="rsvp-desc">
         <label for="nombre">Nombre completo</label>
         <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required>
-
         <label for="acompanantes">Número de acompañantes</label>
         <input id="acompanantes" name="acompanantes" type="number" placeholder="0" min="0" max="10" required>
-
         <div style="display:flex; gap:12px; align-items:center; margin-top:8px;">
           <label><input type="radio" name="asistencia" value="Sí asistiré" required> Sí asistiré</label>
           <label><input type="radio" name="asistencia" value="No podré asistir"> No podré asistir</label>
         </div>
-
         <label for="mensaje" style="margin-top:8px;">Mensaje opcional</label>
         <textarea id="mensaje" name="mensaje" rows="3" placeholder="Escribe un mensaje..."></textarea>
-
         <button type="submit" class="btn" style="margin-top:12px;">Confirmar asistencia</button>
       </form>
-
-      <div id="mensaje-confirmacion" style="margin-top:12px;" aria-live="polite"></div>
     </section>
 
   </main>
 
-  <!-- Footer -->
   <footer style="text-align:center; padding:24px; color:var(--azul-ceniza);">
     <p>Con cariño, Mariana.</p>
   </footer>
 
-  <!-- script.js (cuenta regresiva + envío a WhatsApp) -->
   <script src="script.js"></script>
 </body>
 </html>
