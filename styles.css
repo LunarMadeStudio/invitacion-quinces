@@ -21,9 +21,11 @@ body {
 
 /* HERO */
 .hero-section {
+    position: relative;
     padding: 40px 20px 20px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
 }
@@ -42,80 +44,62 @@ body {
     display: block;
 }
 
-/* Títulos y textos especiales */
+/* Títulos */
 .title-quinces {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Pinyon Script', cursive;
     font-size: 3rem;
-    letter-spacing: 2px;
-    color: var(--azul-hielo);
+    letter-spacing: 1px;
     margin-bottom: 10px;
+    font-weight: 400;
 }
 
 .nombre-quinces {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2rem;
-    color: var(--azul-hielo);
+    font-family: 'Pinyon Script', cursive;
+    font-size: 4rem;
     margin-top: 4px;
+    font-weight: 400;
+    color: var(--azul-oscuro);
 }
 
 .fecha-evento {
-    font-size: 1.2rem;
+    margin-top: 8px;
+    font-size: 1.7rem;
+    font-weight: 500;
     color: var(--azul-oscuro);
 }
 
-/* Invitación */
-.invitacion-titulo {
-    font-family: 'Great Vibes', cursive;
-    font-size: 1.9rem;
+/* Contenido */
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 30px 20px;
     text-align: center;
-    color: var(--azul-hielo);
-    margin-bottom: 12px;
 }
 
-.invitacion-texto {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
-    text-align: center;
-    color: var(--azul-oscuro);
-    margin-bottom: 12px;
-}
-
-.familia {
-    font-family: 'Great Vibes', cursive;
-    font-size: 1.4rem;
-    text-align: center;
-    color: var(--azul-hielo);
-    margin-top: 12px;
-}
-
-/* Secciones y detalles */
 .section {
     background: #ffffff;
     border-radius: 14px;
     padding: 22px;
     margin-bottom: 24px;
     box-shadow: 0 6px 18px rgba(20,30,50,0.06);
-    text-align: center;
 }
 
-.section-title {
-    font-family: 'Great Vibes', cursive;
-    font-size: 1.8rem;
+/* Invitación */
+.hero-elegante h2 {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 3rem;
     margin-bottom: 12px;
-    color: var(--azul-hielo);
 }
 
-.detalle {
-    font-family: 'Poppins', sans-serif;
+.hero-elegante .lead {
     font-size: 1.1rem;
-    color: var(--azul-oscuro);
-    margin: 4px 0;
+    line-height: 1.6;
 }
 
-/* Copas brindando */
-.copas {
-    font-size: 2rem;
-    margin-bottom: 12px;
+.hero-elegante .familia {
+    margin-top: 18px;
+    font-weight: 500;
+    font-family: 'Pinyon Script', cursive;
 }
 
 /* Cuenta regresiva */
@@ -131,10 +115,7 @@ body {
     padding: 12px;
     border-radius: 10px;
     width: 88px;
-    box-shadow: 0 0 15px rgba(255,255,255,0.8);
-    backdrop-filter: blur(3px);
     text-align: center;
-    animation: glow 2.5s infinite ease-in-out;
 }
 
 .count-box span { 
@@ -143,7 +124,51 @@ body {
     display: block; 
 }
 
-/* Botones */
+/* Mariposas */
+.mariposas {
+    position: relative;
+    height: 80px;
+    margin-bottom: 16px;
+}
+
+.mariposa {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: volar 8s linear infinite;
+}
+
+.mariposa.azul { background-image: url('mariposa_azul.png'); left: 10%; animation-delay: 0s; }
+.mariposa.plateada { background-image: url('mariposa_plateada.png'); left: 50%; animation-delay: 2s; }
+.mariposa:nth-child(3) { left: 80%; animation-delay: 4s; }
+
+@keyframes volar {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+    25% { transform: translateY(-12px) rotate(10deg); opacity: 1; }
+    50% { transform: translateY(0) rotate(-10deg); opacity: 0.8; }
+    75% { transform: translateY(12px) rotate(10deg); opacity: 1; }
+    100% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+}
+
+/* Formulario confirmación */
+.confirm-form {
+    max-width: 520px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.confirm-form input,
+.confirm-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--azul-plateado);
+    background: #fff;
+}
+
 .btn {
     display: inline-block;
     padding: 12px 18px;
@@ -152,29 +177,19 @@ body {
     border-radius: 10px;
     text-decoration: none;
     font-weight: 600;
+    cursor: pointer;
 }
 
-.sparkle-text {
-    position: relative;
-    display: inline-block;
-    animation: sparkle 8s linear infinite;
-}
+/* Mapa */
+.map-frame { border-radius: 12px; overflow: hidden; }
 
-/* Animaciones */
-@keyframes glow {  
-    0%,100% { box-shadow: 0 0 12px rgba(255,255,255,0.35); }
-    50%      { box-shadow: 0 0 24px rgba(255,255,255,0.75); }
-}
-
-@keyframes sparkle { 
-    from { transform: translate(0,0); } 
-    to   { transform: translate(60px,60px); } 
-}
+/* Live */
+.live-section .btn { margin-right: 8px; }
 
 /* Responsive */
 @media (max-width: 640px) {
-    .title-quinces { font-size: 2.2rem; }
-    .nombre-quinces { font-size: 1.5rem; }
-    .invitacion-titulo { font-size: 1.5rem; }
-    .invitacion-texto { font-size: 1rem; }
+    .title-quinces { font-size: 3rem; }
+    .nombre-quinces { font-size: 4rem; }
+    .hero-elegante h2 { font-size: 3rem; }
+    .hero-elegante .lead { font-size: 1.1rem; }
 }
