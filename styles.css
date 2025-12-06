@@ -33,10 +33,7 @@ body {
 .hero-image-wrap {
     width: 100%;
     max-width: 360px;
-    margin: 0 auto;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 8px 28px rgba(10,20,40,0.15);
+    margin: 20px auto 0;
 }
 
 .hero-img {
@@ -44,25 +41,23 @@ body {
     display: block;
 }
 
-/* Títulos */
-.title-quinces {
+/* Títulos hero */
+.title-quinces, .nombre-quinces {
     font-family: 'Pinyon Script', cursive;
-    font-size: 3rem;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    font-weight: 400;
-    color: var(--azul-plateado);
+    color: var(--azul-oscuro);
+}
+
+.title-quinces {
+    font-size: 3.5rem;
+    margin-bottom: 6px;
 }
 
 .nombre-quinces {
-    font-family: 'Pinyon Script', cursive;
-    font-size: 3.2rem;
-    margin-top: 4px;
-    font-weight: 400;
-    color: var(--azul-hielo);
+    font-size: 4.5rem;
+    margin-top: 0;
 }
 
-/* Contenido */
+/* Contenido principal */
 .container {
     max-width: 980px;
     margin: 0 auto;
@@ -72,32 +67,64 @@ body {
 
 .section {
     background: #ffffff;
-    border-radius: 14px;
     padding: 22px;
     margin-bottom: 24px;
-    box-shadow: 0 6px 18px rgba(20,30,50,0.06);
 }
 
 /* Invitación */
 .hero-elegante h2 {
     font-family: 'Pinyon Script', cursive;
     font-size: 2.5rem;
+    font-style: italic;
     margin-bottom: 12px;
-    color: var(--azul-oscuro);
 }
 
 .hero-elegante .lead {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.6;
-    font-style: normal;
-    color: var(--azul-ceniza);
 }
 
 .hero-elegante .familia {
-    margin-top: 18px;
-    font-size: 1.4rem;
-    font-weight: 500;
     font-family: 'Pinyon Script', cursive;
+    font-size: 1.5rem;
+    margin-top: 18px;
+}
+
+/* Mariposas */
+.mariposas {
+    position: relative;
+    height: 100px;
+    margin-bottom: 24px;
+}
+
+.mariposa {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: volar 8s linear infinite;
+}
+
+.mariposa.azul { background-image: url('mariposa_azul.png'); }
+.mariposa.plateada { background-image: url('mariposa_plateada.png'); }
+
+/* Animación mariposas */
+@keyframes volar {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+    25% { transform: translateY(-12px) rotate(10deg); opacity: 1; }
+    50% { transform: translateY(0) rotate(-10deg); opacity: 0.8; }
+    75% { transform: translateY(12px) rotate(10deg); opacity: 1; }
+    100% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+}
+
+/* Títulos secciones */
+h2[id] {
+    font-family: 'Pinyon Script', cursive;
+    font-style: italic;
+    font-size: 2rem;
+    color: var(--azul-plateado);
+    margin-bottom: 16px;
 }
 
 /* Cuenta regresiva */
@@ -114,46 +141,6 @@ body {
     border-radius: 10px;
     width: 88px;
     text-align: center;
-}
-
-.count-box span { 
-    font-size: 1.2rem; 
-    font-weight: 700; 
-    display: block; 
-}
-
-/* Títulos secciones cursiva */
-.section h2 {
-    font-style: italic;
-    color: var(--azul-ceniza);
-}
-
-/* Mariposas */
-.mariposas {
-    position: relative;
-    height: 80px;
-    margin-bottom: 16px;
-}
-
-.mariposa {
-    position: absolute;
-    width: 36px;
-    height: 36px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    animation: volar 8s linear infinite;
-}
-
-.mariposa.azul { background-image: url('mariposa_azul.png'); left: 10%; animation-delay: 0s; }
-.mariposa.plateada { background-image: url('mariposa_plateada.png'); left: 50%; animation-delay: 2s; }
-.mariposa:nth-child(3) { left: 80%; animation-delay: 4s; }
-
-@keyframes volar {
-    0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
-    25% { transform: translateY(-12px) rotate(10deg); opacity: 1; }
-    50% { transform: translateY(0) rotate(-10deg); opacity: 0.8; }
-    75% { transform: translateY(12px) rotate(10deg); opacity: 1; }
-    100% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
 }
 
 /* Formulario confirmación */
@@ -185,15 +172,12 @@ body {
 }
 
 /* Mapa */
-.map-frame { border-radius: 12px; overflow: hidden; }
-
-/* Live */
-.live-section .btn { margin-right: 8px; }
+.map-frame { border-radius: 0; overflow: hidden; }
 
 /* Responsive */
 @media (max-width: 640px) {
-    .title-quinces { font-size: 2.5rem; }
-    .nombre-quinces { font-size: 2.8rem; }
+    .title-quinces { font-size: 3rem; }
+    .nombre-quinces { font-size: 4rem; }
     .hero-elegante h2 { font-size: 2rem; }
-    .hero-elegante .lead { font-size: 1rem; }
+    .hero-elegante .familia { font-size: 1.3rem; }
 }
