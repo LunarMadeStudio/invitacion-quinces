@@ -6,7 +6,8 @@
   <title>Invitación - Mariana Ángulo Ayala</title>
 
   <!-- Fuentes -->
-  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- Estilos -->
   <link rel="stylesheet" href="styles.css" />
@@ -15,7 +16,7 @@
 </head>
 <body>
 
-  <!-- HERO / IMAGEN PRINCIPAL -->
+  <!-- HERO -->
   <header class="hero-section" role="banner">
     <h1 class="title-quinces">Mis 15 Años</h1>
     <h2 class="nombre-quinces">Mariana Ángulo Ayala</h2>
@@ -28,11 +29,10 @@
   <main class="container" role="main">
 
     <!-- Invitación / Mensaje -->
-    <section class="section hero-elegante" aria-labelledby="invitation-title">
+    <section class="section hero-elegante sparkle-effect" aria-labelledby="invitation-title">
       <h2 id="invitation-title">Con mucha ilusión, te invitamos a celebrar los 15 años de nuestra amada hija</h2>
       <p class="lead">
-        Será un día mágico donde los sueños, la emoción y la felicidad se unen para crear recuerdos inolvidables.
-        Esperamos contar con tu presencia para que este día sea aún más especial.
+        Será un día mágico donde los sueños, la emoción y la felicidad se unen para crear recuerdos inolvidables. Esperamos contar con tu presencia para que este día sea aún más especial.
       </p>
       <p class="familia">
         Con cariño:<br>
@@ -40,18 +40,16 @@
       </p>
     </section>
 
-    <!-- Sección Mariposas -->
-    <section class="section mariposas-container">
-      <div class="mariposas">
-        <div class="mariposa azul"></div>
-        <div class="mariposa azul"></div>
-        <div class="mariposa azul"></div>
-        <div class="mariposa azul"></div>
-        <div class="mariposa plateada"></div>
-        <div class="mariposa plateada"></div>
-        <div class="mariposa plateada"></div>
-      </div>
-    </section>
+    <!-- Mariposas -->
+    <div class="mariposas">
+      <div class="mariposa azul"></div>
+      <div class="mariposa azul"></div>
+      <div class="mariposa azul"></div>
+      <div class="mariposa azul"></div>
+      <div class="mariposa plateada"></div>
+      <div class="mariposa plateada"></div>
+      <div class="mariposa plateada"></div>
+    </div>
 
     <!-- Cuenta regresiva -->
     <section class="section" aria-labelledby="countdown-title">
@@ -75,25 +73,24 @@
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d795.6322738584368!2d-73.1111433!3d7.0769508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683f9e50511aa1%3A0xbb112d3971937435!2sClub%20Residencial%20Paralela%20150!5e0!3m2!1ses!2sco!4v1700000000000"
         width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
       </iframe>
+
       <p style="margin-top:12px;">
-        <a class="btn" href="https://www.google.com/maps/dir//Cl.+111+%2322b+52,+Bucaramanga,+Santander" target="_blank" rel="noopener">
+        <a class="btn" href="https://www.google.com/maps/dir//Cl.+111+%2322b+52,+Bucaramanga,+Santander/@7.0817492,-73.1960919,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e683fa05322a3c5:0x4116bdbab527a7d7!2m2!1d-73.1136524!2d7.081758?entry=ttu&g_ep=EgoyMDI1MTExNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
           Abrir en Google Maps
         </a>
       </p>
     </section>
 
-    <!-- Transmisión en vivo (SOLO GOOGLE MEET) -->
+    <!-- Transmisión en vivo -->
     <section class="section live-section" aria-labelledby="live-title">
       <h2 id="live-title">📡 Transmisión en Vivo</h2>
       <p>Si no puedes acompañarnos de manera presencial, te invitamos a conectarte a la transmisión y compartir este momento tan especial.</p>
       <p style="margin-top:12px;">
-        <a class="btn" href="https://meet.google.com/hst-wbhp-aop" target="_blank" rel="noopener">
-          Unirme a la transmisión (Google Meet)
-        </a>
+        <a class="btn" href="https://meet.google.com/hst-wbhp-aop" target="_blank" rel="noopener">Unirme a la transmisión (Google Meet)</a>
       </p>
     </section>
 
-    <!-- Formulario de confirmación (RSVP) -->
+    <!-- Formulario de confirmación -->
     <section class="section" aria-labelledby="rsvp-title">
       <h2 id="rsvp-title">Confirmación de asistencia</h2>
       <form id="confirm-form" class="confirm-form" aria-describedby="rsvp-desc">
@@ -109,6 +106,7 @@
         <textarea id="mensaje" name="mensaje" rows="3" placeholder="Escribe un mensaje..."></textarea>
         <button type="submit" class="btn" style="margin-top:12px;">Confirmar asistencia</button>
       </form>
+      <div id="mensaje-confirmacion" style="margin-top:12px;" aria-live="polite"></div>
     </section>
 
   </main>
