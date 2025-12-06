@@ -1,0 +1,219 @@
+:root {
+    --azul-hielo: #7e93a8;
+    --azul-ceniza: #76899a;
+    --azul-plateado: #778ca1;
+    --azul-oscuro: #18191e;
+    --plateado: #C0C5CF;
+    --plateado-brillante: #E6E9EE;
+    --blanco-perla: #F7F8FA;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--blanco-perla);
+    color: var(--azul-oscuro);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* HERO — ahora SIN fondo */
+.hero-section {
+    position: relative;
+    padding: 40px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    text-align: center;
+    animation: fadeIn 1.8s ease-in-out;
+}
+
+.hero-image-wrap {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(10,20,40,0.15);
+}
+
+.hero-img {
+    width: 100%;
+    display: block;
+}
+
+/* Títulos */
+.title-quinces {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 14px rgba(0,0,0,0.45);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.nombre-quinces {
+    font-size: 2rem;
+    margin-top: 4px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.4);
+    font-weight: 500;
+    color: var(--azul-oscuro);
+}
+
+.fecha-evento {
+    margin-top: 8px;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--azul-oscuro);
+}
+
+/* Contenido */
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.section {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 24px;
+    box-shadow: 0 6px 18px rgba(20,30,50,0.06);
+}
+
+/* Cuenta regresiva */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.count-box {
+    background: var(--plateado-brillante);
+    padding: 12px;
+    border-radius: 10px;
+    width: 88px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.8);
+    backdrop-filter: blur(3px);
+    text-align: center;
+    animation: glow 2.5s infinite ease-in-out;
+}
+
+.count-box span { 
+    font-size: 1.2rem; 
+    font-weight: 700; 
+    display: block; 
+}
+
+/* Galería */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    gap: 12px;
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform .35s, filter .35s;
+}
+
+.galeria img:hover {
+    transform: scale(1.04);
+    filter: brightness(1.06);
+}
+
+/* Formulario confirmación */
+.confirm-form {
+    max-width: 520px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.confirm-form input,
+.confirm-form textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--azul-plateado);
+    background: #fff;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    background: var(--azul-plateado);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-muted { 
+    background: gray; 
+    cursor: default; 
+    opacity: 0.9; 
+}
+
+.map-frame {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Live */
+.live-section .btn { 
+    margin-right: 8px; 
+}
+
+.sparkle-effect { 
+    position: relative; 
+    overflow: hidden; 
+}
+
+.sparkle-effect::before, 
+.sparkle-effect::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px);
+    background-size: 8px 8px;
+    animation: sparkle 8s linear infinite;
+    opacity: 0.35;
+}
+
+.sparkle-effect::after { 
+    animation-duration: 14s; 
+    opacity: 0.18; 
+}
+
+/* Animaciones */
+@keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(18px); } 
+    to { opacity: 1; transform: none; } 
+}
+
+@keyframes glow {  
+    0%,100% { box-shadow: 0 0 12px rgba(255,255,255,0.35); }
+    50%      { box-shadow: 0 0 24px rgba(255,255,255,0.75); }
+}
+
+@keyframes sparkle { 
+    from { transform: translate(0,0); } 
+    to   { transform: translate(60px,60px); } 
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .title-quinces { font-size: 2.2rem; }
+    .nombre-quinces { font-size: 1.5rem; }
+}
