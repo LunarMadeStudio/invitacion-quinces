@@ -22,9 +22,11 @@ body {
 /* HERO */
 .hero-section {
     position: relative;
-    padding: 20px;
+    padding: 40px 20px 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     text-align: center;
 }
 
@@ -40,6 +42,24 @@ body {
 .hero-img {
     width: 100%;
     display: block;
+}
+
+/* Títulos */
+.title-quinces {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: var(--azul-plateado);
+}
+
+.nombre-quinces {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 3.2rem;
+    margin-top: 4px;
+    font-weight: 400;
+    color: var(--azul-hielo);
 }
 
 /* Contenido */
@@ -61,51 +81,23 @@ body {
 /* Invitación */
 .hero-elegante h2 {
     font-family: 'Pinyon Script', cursive;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     margin-bottom: 12px;
-    color: var(--azul-ceniza);
+    color: var(--azul-oscuro);
 }
 
 .hero-elegante .lead {
-    font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
-    font-style: normal;
     line-height: 1.6;
+    font-style: normal;
+    color: var(--azul-ceniza);
 }
 
 .hero-elegante .familia {
-    font-family: 'Pinyon Script', cursive;
-    font-size: 1.4rem;
     margin-top: 18px;
-}
-
-/* Mariposas */
-.mariposas {
-    position: relative;
-    height: 100px;
-    margin-bottom: 16px;
-}
-
-.mariposa {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    animation: volar 10s ease-in-out infinite;
-}
-
-.mariposa.azul { background-image: url('images/mariposa_azul.png'); left: 10%; animation-delay: 0s; }
-.mariposa.plateada { background-image: url('images/mariposa_plateada.png'); left: 50%; animation-delay: 2s; }
-.mariposa:nth-child(3) { left: 30%; animation-delay: 4s; }
-.mariposa:nth-child(4) { left: 70%; animation-delay: 6s; }
-
-@keyframes volar {
-    0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
-    25% { transform: translateY(-12px) rotate(10deg); opacity: 1; }
-    50% { transform: translateY(0) rotate(-10deg); opacity: 0.8; }
-    75% { transform: translateY(12px) rotate(10deg); opacity: 1; }
-    100% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: 'Pinyon Script', cursive;
 }
 
 /* Cuenta regresiva */
@@ -130,13 +122,38 @@ body {
     display: block; 
 }
 
-/* Títulos de secciones */
+/* Títulos secciones cursiva */
 .section h2 {
-    font-family: 'Pinyon Script', cursive;
-    font-size: 1.5rem;
-    color: var(--azul-ceniza);
-    text-align: center;
     font-style: italic;
+    color: var(--azul-ceniza);
+}
+
+/* Mariposas */
+.mariposas {
+    position: relative;
+    height: 80px;
+    margin-bottom: 16px;
+}
+
+.mariposa {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: volar 8s linear infinite;
+}
+
+.mariposa.azul { background-image: url('mariposa_azul.png'); left: 10%; animation-delay: 0s; }
+.mariposa.plateada { background-image: url('mariposa_plateada.png'); left: 50%; animation-delay: 2s; }
+.mariposa:nth-child(3) { left: 80%; animation-delay: 4s; }
+
+@keyframes volar {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+    25% { transform: translateY(-12px) rotate(10deg); opacity: 1; }
+    50% { transform: translateY(0) rotate(-10deg); opacity: 0.8; }
+    75% { transform: translateY(12px) rotate(10deg); opacity: 1; }
+    100% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
 }
 
 /* Formulario confirmación */
@@ -175,8 +192,8 @@ body {
 
 /* Responsive */
 @media (max-width: 640px) {
-    .hero-elegante h2 { font-size: 2.2rem; }
-    .hero-elegante .lead { font-size: 1.1rem; }
-    .hero-elegante .familia { font-size: 1.3rem; }
-    .section h2 { font-size: 1.3rem; }
+    .title-quinces { font-size: 2.5rem; }
+    .nombre-quinces { font-size: 2.8rem; }
+    .hero-elegante h2 { font-size: 2rem; }
+    .hero-elegante .lead { font-size: 1rem; }
 }
