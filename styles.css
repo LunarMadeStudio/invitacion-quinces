@@ -3,6 +3,7 @@
     --azul-ceniza: #76899a;
     --azul-plateado: #778ca1;
     --azul-oscuro: #18191e;
+    --azul-real: #3a6ea5; /* nuevo azul para títulos principales */
     --plateado: #C0C5CF;
     --plateado-brillante: #E6E9EE;
     --blanco-perla: #F7F8FA;
@@ -30,10 +31,27 @@ body {
     text-align: center;
 }
 
+.title-quinces {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 3.6rem;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: var(--azul-real);
+}
+
+.nombre-quinces {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 4rem;
+    margin-top: 8px;
+    font-weight: 400;
+    color: var(--azul-real);
+}
+
 .hero-image-wrap {
     width: 100%;
-    max-width: 360px;
+    max-width: 480px;
     margin: 20px auto 0;
+    overflow: hidden;
 }
 
 .hero-img {
@@ -41,23 +59,7 @@ body {
     display: block;
 }
 
-/* Títulos hero */
-.title-quinces, .nombre-quinces {
-    font-family: 'Pinyon Script', cursive;
-    color: var(--azul-oscuro);
-}
-
-.title-quinces {
-    font-size: 3.5rem;
-    margin-bottom: 6px;
-}
-
-.nombre-quinces {
-    font-size: 4.5rem;
-    margin-top: 0;
-}
-
-/* Contenido principal */
+/* Contenido */
 .container {
     max-width: 980px;
     margin: 0 auto;
@@ -67,40 +69,44 @@ body {
 
 .section {
     background: #ffffff;
+    border-radius: 14px;
     padding: 22px;
     margin-bottom: 24px;
+    box-shadow: 0 6px 18px rgba(20,30,50,0.06);
 }
 
 /* Invitación */
 .hero-elegante h2 {
     font-family: 'Pinyon Script', cursive;
-    font-size: 2.5rem;
+    font-size: 2.6rem;
     font-style: italic;
     margin-bottom: 12px;
 }
 
 .hero-elegante .lead {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
+    font-style: normal;
 }
 
 .hero-elegante .familia {
-    font-family: 'Pinyon Script', cursive;
-    font-size: 1.5rem;
     margin-top: 18px;
+    font-weight: 500;
+    font-family: 'Pinyon Script', cursive;
+    font-size: 1.4rem;
 }
 
 /* Mariposas */
 .mariposas {
     position: relative;
     height: 100px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 .mariposa {
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     background-repeat: no-repeat;
     background-size: contain;
     animation: volar 8s linear infinite;
@@ -109,7 +115,14 @@ body {
 .mariposa.azul { background-image: url('mariposa_azul.png'); }
 .mariposa.plateada { background-image: url('mariposa_plateada.png'); }
 
-/* Animación mariposas */
+.mariposa:nth-child(1) { left: 5%; animation-delay: 0s; }
+.mariposa:nth-child(2) { left: 20%; animation-delay: 1s; }
+.mariposa:nth-child(3) { left: 40%; animation-delay: 2s; }
+.mariposa:nth-child(4) { left: 60%; animation-delay: 3s; }
+.mariposa:nth-child(5) { left: 15%; animation-delay: 0s; }
+.mariposa:nth-child(6) { left: 35%; animation-delay: 1s; }
+.mariposa:nth-child(7) { left: 55%; animation-delay: 2s; }
+
 @keyframes volar {
     0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
     25% { transform: translateY(-12px) rotate(10deg); opacity: 1; }
@@ -118,13 +131,11 @@ body {
     100% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
 }
 
-/* Títulos secciones */
-h2[id] {
+/* Títulos secciones cursiva */
+.section h2 {
     font-family: 'Pinyon Script', cursive;
-    font-style: italic;
     font-size: 2rem;
-    color: var(--azul-plateado);
-    margin-bottom: 16px;
+    font-style: italic;
 }
 
 /* Cuenta regresiva */
@@ -141,6 +152,12 @@ h2[id] {
     border-radius: 10px;
     width: 88px;
     text-align: center;
+}
+
+.count-box span { 
+    font-size: 1.2rem; 
+    font-weight: 700; 
+    display: block; 
 }
 
 /* Formulario confirmación */
@@ -172,12 +189,16 @@ h2[id] {
 }
 
 /* Mapa */
-.map-frame { border-radius: 0; overflow: hidden; }
+.map-frame { border-radius: 12px; overflow: hidden; }
+
+/* Live */
+.live-section .btn { margin-right: 8px; }
 
 /* Responsive */
 @media (max-width: 640px) {
-    .title-quinces { font-size: 3rem; }
-    .nombre-quinces { font-size: 4rem; }
-    .hero-elegante h2 { font-size: 2rem; }
-    .hero-elegante .familia { font-size: 1.3rem; }
+    .title-quinces { font-size: 3.8rem; }
+    .nombre-quinces { font-size: 4.2rem; }
+    .hero-elegante h2 { font-size: 2.4rem; }
+    .hero-elegante .lead { font-size: 1.2rem; }
+    .section h2 { font-size: 1.8rem; }
 }
