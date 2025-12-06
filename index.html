@@ -7,7 +7,7 @@
 
   <!-- Estilos -->
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Great+Vibes&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
 
   <meta name="description" content="Invitación a los 15 años de Mariana Ángulo Ayala — Club Residencial Paralela 150, Bucaramanga. Transmisión en vivo por Google Meet." />
 </head>
@@ -15,12 +15,11 @@
 
   <!-- HERO / IMAGEN PRINCIPAL -->
   <header class="hero-section" role="banner">
-    <h1 class="title-quinces">Mis 15 Años</h1>
+    <h1 class="title-quinces sparkle-text">Mis 15 Años</h1>
     <h2 class="nombre-quinces">Mariana Ángulo Ayala</h2>
     <p class="fecha-evento sparkle-text">27 de diciembre de 2025 • 7:00 PM</p>
 
-    <!-- Imagen vertical -->
-    <div class="hero-image-wrap" style="margin-top:18px;">
+    <div class="hero-image-wrap">
       <img src="invitacion_quince_vertical.png" alt="Mariana - Invitación" class="hero-img" />
     </div>
   </header>
@@ -29,13 +28,16 @@
 
     <!-- Invitación / Mensaje -->
     <section class="section hero-elegante sparkle-effect" aria-labelledby="invitation-title">
-      <h2 id="invitation-title" class="section-title">Con mucha ilusión, te invitamos a celebrar los 15 años de nuestra amada hija</h2>
-      <p class="lead">
+      <h2 id="invitation-title" class="invitacion-titulo">Con mucha ilusión, te invitamos a celebrar los 15 años de nuestra amada hija</h2>
+      <p class="lead invitacion-texto">
         Será un día mágico donde los sueños, la emoción y la felicidad se unen para crear recuerdos inolvidables.
         Esperamos contar con tu presencia para que este día sea aún más especial.
       </p>
-      <p class="familia sparkle-text" style="margin-top:18px;">Con cariño: Orlando Ángulo & Beatriz Ayala</p>
+      <p class="familia">Con cariño:<br>Orlando Ángulo & Beatriz Ayala</p>
     </section>
+
+    <!-- Copas brindando -->
+    <div class="copas" aria-hidden="true">🥂🥂</div>
 
     <!-- Cuenta regresiva -->
     <section class="section" aria-labelledby="countdown-title">
@@ -46,10 +48,10 @@
     <!-- Detalles del evento -->
     <section class="section" aria-labelledby="details-title">
       <h2 id="details-title" class="section-title">Detalles del evento</h2>
-      <p><strong>Fecha:</strong> 27 de diciembre de 2025</p>
-      <p><strong>Hora:</strong> 7:00 PM</p>
-      <p><strong>Lugar:</strong> Club Residencial Paralela 150</p>
-      <p><strong>Dirección:</strong> Paralela 150, Bucaramanga, Santander</p>
+      <p class="detalle"><strong>Fecha:</strong> 27 de diciembre de 2025</p>
+      <p class="detalle"><strong>Hora:</strong> 7:00 PM</p>
+      <p class="detalle"><strong>Lugar:</strong> Club Residencial Paralela 150</p>
+      <p class="detalle"><strong>Dirección:</strong> Paralela 150, Bucaramanga, Santander</p>
     </section>
 
     <!-- Mapa embebido -->
@@ -71,16 +73,18 @@
     <!-- Transmisión en vivo -->
     <section class="section live-section" aria-labelledby="live-title">
       <h2 id="live-title" class="section-title">📡 Transmisión en Vivo</h2>
-      <p>Si no puedes acompañarnos de manera presencial, te invitamos a conectarte a la transmisión y compartir este momento tan especial.</p>
+      <p class="detalle">
+        Si no puedes acompañarnos de manera presencial, te invitamos a conectarte a la transmisión y compartir este momento tan especial.
+      </p>
 
       <p style="margin-top:12px;">
-        <a class="btn sparkle-text" href="https://meet.google.com/hst-wbhp-aop" target="_blank" rel="noopener">
+        <a class="btn" href="https://meet.google.com/hst-wbhp-aop" target="_blank" rel="noopener">
           Unirme a la transmisión (Google Meet)
         </a>
       </p>
     </section>
 
-    <!-- Formulario de confirmación (RSVP) -->
+    <!-- Formulario de confirmación -->
     <section class="section" aria-labelledby="rsvp-title">
       <h2 id="rsvp-title" class="section-title">Confirmación de asistencia</h2>
 
@@ -91,7 +95,7 @@
         <label for="acompanantes">Número de acompañantes</label>
         <input id="acompanantes" name="acompanantes" type="number" placeholder="0" min="0" max="10" required>
 
-        <div style="display:flex; gap:12px; align-items:center; margin-top:8px;">
+        <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:8px;">
           <label><input type="radio" name="asistencia" value="Sí asistiré" required> Sí asistiré</label>
           <label><input type="radio" name="asistencia" value="No podré asistir"> No podré asistir</label>
         </div>
@@ -101,8 +105,6 @@
 
         <button type="submit" class="btn sparkle-text" style="margin-top:12px;">Confirmar asistencia</button>
       </form>
-
-      <div id="mensaje-confirmacion" style="margin-top:12px;" aria-live="polite"></div>
     </section>
 
   </main>
