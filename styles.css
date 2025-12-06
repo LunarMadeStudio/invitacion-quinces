@@ -16,18 +16,11 @@ body {
     background: var(--blanco-perla);
     color: var(--azul-oscuro);
     overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
 }
 
-/* HERO */
 .hero-section {
-    position: relative;
-    padding: 40px 20px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     text-align: center;
+    padding: 40px 20px 20px;
 }
 
 .hero-image-wrap {
@@ -39,42 +32,22 @@ body {
     box-shadow: 0 8px 28px rgba(10,20,40,0.15);
 }
 
-.hero-img {
-    width: 100%;
-    display: block;
-}
+.hero-img { width: 100%; display: block; }
 
-/* Títulos */
-.title-quinces {
+/* Títulos elegantes */
+.title-quinces,
+.nombre-quinces,
+.hero-elegante h2,
+.hero-elegante .familia {
     font-family: 'Pinyon Script', cursive;
-    font-size: 3rem;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    font-weight: 400;
-}
-
-.nombre-quinces {
-    font-family: 'Pinyon Script', cursive;
-    font-size: 4rem;
-    margin-top: 4px;
-    font-weight: 400;
-    color: var(--azul-oscuro);
-}
-
-.fecha-evento {
-    margin-top: 8px;
-    font-size: 1.7rem;
-    font-weight: 500;
-    color: var(--azul-oscuro);
-}
-
-/* Contenido */
-.container {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 30px 20px;
     text-align: center;
 }
+
+.title-quinces { font-size: 2.8rem; margin-bottom: 10px; }
+.nombre-quinces { font-size: 3.2rem; margin-top: 4px; color: var(--azul-oscuro); }
+.fecha-evento { font-size: 1.4rem; font-weight: 500; margin-top: 8px; color: var(--azul-oscuro); }
+
+.container { max-width: 980px; margin: 0 auto; padding: 30px 20px; text-align: center; }
 
 .section {
     background: #ffffff;
@@ -85,22 +58,8 @@ body {
 }
 
 /* Invitación */
-.hero-elegante h2 {
-    font-family: 'Pinyon Script', cursive;
-    font-size: 3rem;
-    margin-bottom: 12px;
-}
-
-.hero-elegante .lead {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.hero-elegante .familia {
-    margin-top: 18px;
-    font-weight: 500;
-    font-family: 'Pinyon Script', cursive;
-}
+.hero-elegante .lead { font-family: 'Pinyon Script', cursive; font-size: 1.2rem; line-height: 1.6; }
+.hero-elegante .familia { margin-top: 12px; font-size: 1.3rem; }
 
 /* Cuenta regresiva */
 .countdown {
@@ -118,26 +77,17 @@ body {
     text-align: center;
 }
 
-.count-box span { 
-    font-size: 1.2rem; 
-    font-weight: 700; 
-    display: block; 
-}
+.count-box span { font-size: 1.2rem; font-weight: 700; display: block; }
 
-/* Mariposas */
-.mariposas {
-    position: relative;
-    height: 80px;
-    margin-bottom: 16px;
-}
-
+/* Mariposas elegantes */
+.mariposas { position: relative; height: 100px; margin-bottom: 16px; }
 .mariposa {
     position: absolute;
-    width: 28px;
-    height: 28px;
+    width: 60px;
+    height: 60px;
     background-repeat: no-repeat;
     background-size: contain;
-    animation: volar 8s linear infinite;
+    animation: volar 10s linear infinite;
 }
 
 .mariposa.azul { background-image: url('mariposa_azul.png'); left: 10%; animation-delay: 0s; }
@@ -146,20 +96,14 @@ body {
 
 @keyframes volar {
     0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
-    25% { transform: translateY(-12px) rotate(10deg); opacity: 1; }
+    25% { transform: translateY(-15px) rotate(10deg); opacity: 1; }
     50% { transform: translateY(0) rotate(-10deg); opacity: 0.8; }
-    75% { transform: translateY(12px) rotate(10deg); opacity: 1; }
+    75% { transform: translateY(15px) rotate(10deg); opacity: 1; }
     100% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
 }
 
 /* Formulario confirmación */
-.confirm-form {
-    max-width: 520px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
+.confirm-form { max-width: 520px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; text-align: center; }
 
 .confirm-form input,
 .confirm-form textarea {
@@ -169,27 +113,27 @@ body {
     background: #fff;
 }
 
+.radio-group { display: flex; justify-content: center; gap: 12px; }
+
 .btn {
     display: inline-block;
     padding: 12px 18px;
     background: var(--azul-plateado);
     color: white;
     border-radius: 10px;
-    text-decoration: none;
     font-weight: 600;
     cursor: pointer;
+    text-decoration: none;
+    margin-top: 12px;
 }
 
-/* Mapa */
-.map-frame { border-radius: 12px; overflow: hidden; }
-
-/* Live */
-.live-section .btn { margin-right: 8px; }
+/* Footer */
+footer { text-align: center; padding: 24px; color: var(--azul-ceniza); }
 
 /* Responsive */
 @media (max-width: 640px) {
-    .title-quinces { font-size: 3rem; }
-    .nombre-quinces { font-size: 4rem; }
-    .hero-elegante h2 { font-size: 3rem; }
-    .hero-elegante .lead { font-size: 1.1rem; }
+    .title-quinces { font-size: 2.2rem; }
+    .nombre-quinces { font-size: 2.6rem; }
+    .hero-elegante h2 { font-size: 2.2rem; }
+    .hero-elegante .lead { font-size: 1rem; }
 }
