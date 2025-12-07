@@ -3,7 +3,6 @@
     --azul-ceniza: #76899a;
     --azul-plateado: #778ca1;
     --azul-oscuro: #18191e;
-    --azul-real: #3a6ea5; /* nuevo azul para títulos principales */
     --plateado: #C0C5CF;
     --plateado-brillante: #E6E9EE;
     --blanco-perla: #F7F8FA;
@@ -18,6 +17,7 @@ body {
     color: var(--azul-oscuro);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
+    text-align: center;
 }
 
 /* HERO */
@@ -26,31 +26,30 @@ body {
     padding: 40px 20px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    text-align: center;
 }
 
 .title-quinces {
     font-family: 'Pinyon Script', cursive;
-    font-size: 3.6rem;
-    margin-bottom: 10px;
+    font-size: 3rem;
     font-weight: 400;
-    color: var(--azul-real);
+    color: var(--azul-plateado);
+    margin-bottom: 8px;
 }
 
 .nombre-quinces {
     font-family: 'Pinyon Script', cursive;
-    font-size: 4rem;
-    margin-top: 8px;
-    font-weight: 400;
-    color: var(--azul-real);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--azul-hielo);
+    margin-top: 0;
 }
 
 .hero-image-wrap {
     width: 100%;
-    max-width: 480px;
+    max-width: 400px;
     margin: 20px auto 0;
+    border-radius: 12px;
     overflow: hidden;
 }
 
@@ -64,9 +63,9 @@ body {
     max-width: 980px;
     margin: 0 auto;
     padding: 30px 20px;
-    text-align: center;
 }
 
+/* Secciones */
 .section {
     background: #ffffff;
     border-radius: 14px;
@@ -75,10 +74,17 @@ body {
     box-shadow: 0 6px 18px rgba(20,30,50,0.06);
 }
 
+.section-title h2 {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 2rem;
+    color: var(--azul-ceniza);
+    margin-bottom: 12px;
+}
+
 /* Invitación */
 .hero-elegante h2 {
     font-family: 'Pinyon Script', cursive;
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     font-style: italic;
     margin-bottom: 12px;
 }
@@ -90,10 +96,10 @@ body {
 }
 
 .hero-elegante .familia {
-    margin-top: 18px;
-    font-weight: 500;
     font-family: 'Pinyon Script', cursive;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 18px;
 }
 
 /* Mariposas */
@@ -112,16 +118,9 @@ body {
     animation: volar 8s linear infinite;
 }
 
-.mariposa.azul { background-image: url('mariposa_azul.png'); }
-.mariposa.plateada { background-image: url('mariposa_plateada.png'); }
-
-.mariposa:nth-child(1) { left: 5%; animation-delay: 0s; }
-.mariposa:nth-child(2) { left: 20%; animation-delay: 1s; }
-.mariposa:nth-child(3) { left: 40%; animation-delay: 2s; }
-.mariposa:nth-child(4) { left: 60%; animation-delay: 3s; }
-.mariposa:nth-child(5) { left: 15%; animation-delay: 0s; }
-.mariposa:nth-child(6) { left: 35%; animation-delay: 1s; }
-.mariposa:nth-child(7) { left: 55%; animation-delay: 2s; }
+.mariposa.azul { background-image: url(mariposa_azul.png); left: 10%; animation-delay: 0s; }
+.mariposa.plateada { background-image: url(mariposa_plateada.png); left: 50%; animation-delay: 2s; }
+.mariposa:nth-child(3) { left: 80%; animation-delay: 4s; }
 
 @keyframes volar {
     0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
@@ -129,13 +128,6 @@ body {
     50% { transform: translateY(0) rotate(-10deg); opacity: 0.8; }
     75% { transform: translateY(12px) rotate(10deg); opacity: 1; }
     100% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
-}
-
-/* Títulos secciones cursiva */
-.section h2 {
-    font-family: 'Pinyon Script', cursive;
-    font-size: 2rem;
-    font-style: italic;
 }
 
 /* Cuenta regresiva */
@@ -196,9 +188,8 @@ body {
 
 /* Responsive */
 @media (max-width: 640px) {
-    .title-quinces { font-size: 3.8rem; }
-    .nombre-quinces { font-size: 4.2rem; }
-    .hero-elegante h2 { font-size: 2.4rem; }
-    .hero-elegante .lead { font-size: 1.2rem; }
-    .section h2 { font-size: 1.8rem; }
+    .title-quinces { font-size: 2.5rem; }
+    .nombre-quinces { font-size: 2rem; }
+    .hero-elegante h2 { font-size: 2rem; }
+    .hero-elegante .lead { font-size: 1.1rem; }
 }
